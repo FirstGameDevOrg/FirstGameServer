@@ -52,6 +52,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.iohao.game</groupId>
+            <artifactId>bolt-run-one</artifactId>
+            <version>17.1.13</version>
+        </dependency>
     </dependencies>
 
     <build>
