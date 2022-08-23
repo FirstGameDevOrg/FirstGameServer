@@ -1,0 +1,17 @@
+==================== 游戏文档格式说明 ====================
+https://www.yuque.com/iohao/game/irth38#cJLdC
+
+==================== DemoSpringAction spring demo : 这是一个 spring 管理的 action 层 ====================
+路由: 2 - 0  --- 【spring 示例方法】 --- 【DemoSpringAction:48】【here】
+    方法参数: com.game.firstgameserver.iogame.msg.HelloSpringMsg
+    方法返回值: com.game.firstgameserver.iogame.msg.HelloSpringMsg
+ 
+
+==================== 错误码 ====================
+ -1006 : 数据不存在 
+ -1005 : class 不存在 
+ -1004 : 请先登录 
+ -1003 : 心跳超时相关 
+ -1002 : 路由错误 
+ -1001 : 参数验错误 
+ -1000 : 系统其它错误 
