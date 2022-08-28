@@ -46,8 +46,6 @@ public class SocketGenerateFileForProto {
 
         String[] generateFolderArray = new String[]{
                 SystemUtil.getUserInfo().getCurrentDir()
-                , "target"
-                , "proto"
         };
 
         // 生成 .proto 文件存放的目录
