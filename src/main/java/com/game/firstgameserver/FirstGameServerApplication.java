@@ -23,7 +23,6 @@ public class FirstGameServerApplication {
 
         // 游戏对外服端口
         int port = 10100;
-
         
         // spring 逻辑服
         var demoLogicServer = new DemoSpringLogicServer();
