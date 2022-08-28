@@ -1,16 +1,16 @@
-spring:
-  datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3360/springboot5dy57?useUnicode=true&characterEncoding=utf-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&useSSL=false
-    username: root
-    password: a123456
+#spring:
+#  datasource:
+#    driverClassName: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://127.0.0.1:3360/springboot5dy57?useUnicode=true&characterEncoding=utf-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&useSSL=false
+#    username: root
+#    password: a123456
 
-mybatis:
-  mapper-locations: classpath*:/mapper/*.xml
-  type-aliases-package: com.game.firstgameserver.*.pojo
+#mybatis:
+#  mapper-locations: classpath*:/mapper/*.xml
+#  type-aliases-package: com.game.firstgameserver.*.pojo
 
 server:
-  port: 8080
+  port: 8888
 jwt:
   secret: qnAqsQa7600vrTBcr1WB8P8dg4cbgS5i8LZGjWnpREL # 密钥
   expiration: 30 # token 有效期（S)

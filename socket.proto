@@ -26,7 +26,7 @@ message ExternalMessage {
   int32 protocolSwitch = 2;
   // 业务路由（高16为主, 低16为子）
   int32 cmdMerge = 3;
-  // 响应码。
+  // 响应码。从字段精简的角度，我们不可能每次响应都带上完整的异常信息给客户端排查问题，因此，我们会定义一些响应码，通过编号进行网络传输，方便客户端定位问题。0:成功!=0: 表示有错误
   int32 responseStatus = 4;
   // 验证信息
   string validMsg = 5;
