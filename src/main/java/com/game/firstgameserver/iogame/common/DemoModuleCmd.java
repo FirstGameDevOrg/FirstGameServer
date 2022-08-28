@@ -83,4 +83,8 @@ public interface DemoModuleCmd {
      * 基础类型包装类
      */
     int demoModule_14_wrapper_cmd = 14;
+    /**
+     * 用户模块
+     */
+    int userModuleCmd = 15;
 }

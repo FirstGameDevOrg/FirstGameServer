@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.game.firstgameserver.iogame.msg;
+package com.game.firstgameserver.iogame.utils;
 
-import com.baidu.bjf.remoting.protobuf.annotation.ProtobufClass;
-import com.iohao.game.widget.light.protobuf.ProtoFileMerge;
+import com.iohao.game.bolt.broker.client.external.bootstrap.message.ExternalMessage;
 import lombok.AccessLevel;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Getter;
 import lombok.experimental.FieldDefaults;
 
 /**
  * @author 渔民小镇
- * @date 2022-05-14
+ * @date 2022-07-09
  */
-@Setter
-@ToString
-@ProtobufClass
-@ProtoFileMerge(fileName = "socket.proto", filePackage = "pb.socket")
+@Getter
 @FieldDefaults(level = AccessLevel.PUBLIC)
-public class HelloSpringMsg {
-    String name;
+public class ClientCommand {
+    ExternalMessage externalMessage;
+
+    Class<?> resultClass;
+
+    ClientCommand() {
+    }
 }

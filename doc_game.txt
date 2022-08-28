@@ -7,6 +7,12 @@ https://www.yuque.com/iohao/game/irth38#cJLdC
     方法返回值: com.game.firstgameserver.iogame.msg.HelloSpringMsg
  
 
+==================== DemoLoginAction  ====================
+路由: 15 - 0  --- 【登录方法】 --- 【DemoLoginAction:35】【here】
+    方法参数: com.game.firstgameserver.iogame.msg.UserLogin
+    方法返回值: com.game.firstgameserver.iogame.msg.UserInfo
+ 
+
 ==================== 错误码 ====================
  -1006 : 数据不存在 
  -1005 : class 不存在 
