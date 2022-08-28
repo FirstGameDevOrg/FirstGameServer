@@ -1,14 +1,14 @@
 ==================== 游戏文档格式说明 ====================
 https://www.yuque.com/iohao/game/irth38#cJLdC
 
-==================== DemoSpringAction spring demo : 这是一个 spring 管理的 action 层 ====================
+==================== DemoSpringAction 这是一个spring管理的action的demo ====================
 路由: 2 - 0  --- 【spring 示例方法】 --- 【DemoSpringAction:48】【here】
     方法参数: com.game.firstgameserver.iogame.msg.HelloSpringMsg
     方法返回值: com.game.firstgameserver.iogame.msg.HelloSpringMsg
  
 
-==================== DemoLoginAction  ====================
-路由: 15 - 0  --- 【登录方法】 --- 【DemoLoginAction:35】【here】
+==================== DemoLoginAction 用户登录有关事务 ====================
+路由: 15 - 0  --- 【登录方法】 --- 【DemoLoginAction:37】【here】
     方法参数: com.game.firstgameserver.iogame.msg.UserLogin
     方法返回值: com.game.firstgameserver.iogame.msg.UserInfo
  

@@ -12,7 +12,7 @@ import lombok.ToString;
 import lombok.experimental.FieldDefaults;
 
 /**
- * 对外服数据协议
+ * 对外服数据协议包装
  *
  * @author 渔民小镇
  * @date 2022-01-10

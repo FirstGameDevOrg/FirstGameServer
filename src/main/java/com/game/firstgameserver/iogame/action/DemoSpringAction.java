@@ -24,7 +24,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
- * spring demo : 这是一个 spring 管理的 action 层
+ * 这是一个spring管理的action的demo
  *
  * @author 渔民小镇
  * @date 2022-03-22

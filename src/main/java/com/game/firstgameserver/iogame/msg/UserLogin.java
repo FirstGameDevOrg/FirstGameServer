@@ -9,6 +9,8 @@ import lombok.ToString;
 import lombok.experimental.FieldDefaults;
 
 /**
+ * 用户登录请求
+ *
  * @author zh
  */
 @Data
@@ -18,8 +20,14 @@ import lombok.experimental.FieldDefaults;
 @ProtoFileMerge(fileName = "socket.proto", filePackage = "pb.socket")
 @FieldDefaults(level = AccessLevel.PUBLIC)
 public class UserLogin {
-    //用户名
+
+    /**
+     * 用户名
+     */
     String username;
-    //密码
+
+    /**
+     * 密码
+     */
     String password;
 }

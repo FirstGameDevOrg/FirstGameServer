@@ -9,6 +9,8 @@ import lombok.ToString;
 import lombok.experimental.FieldDefaults;
 
 /**
+ * 用户信息响应
+ *
  * @author zh
  */
 @Data
@@ -18,10 +20,19 @@ import lombok.experimental.FieldDefaults;
 @ProtoFileMerge(fileName = "socket.proto", filePackage = "pb.socket")
 @FieldDefaults(level = AccessLevel.PUBLIC)
 public class UserInfo {
-    //id
+
+    /**
+     * id
+     */
     long id;
-    //用户昵称
+
+    /**
+     * 用户昵称
+     */
     String name;
-    //jwt
+
+    /**
+     * jwt
+     */
     String jwt;
 }

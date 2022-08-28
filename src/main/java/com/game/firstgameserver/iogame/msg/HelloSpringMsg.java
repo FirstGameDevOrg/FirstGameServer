@@ -24,6 +24,8 @@ import lombok.ToString;
 import lombok.experimental.FieldDefaults;
 
 /**
+ * 测试spring消息连通
+ *
  * @author 渔民小镇
  * @date 2022-05-14
  */

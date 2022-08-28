@@ -12,6 +12,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+ * 用户登录有关事务
+ */
 @Slf4j
 @Component
 @ActionController(DemoCmdForUser.cmd)
