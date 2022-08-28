@@ -1,5 +1,4 @@
 HELP.md
-target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
@@ -34,6 +33,5 @@ build/
 .vscode/
 
 ### project ###
+target/*
 !target/proto/
-
-
