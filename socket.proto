@@ -1,7 +1,6 @@
 syntax = "proto3";
 package pb.socket;
 
-
 // 测试spring消息连通
 message HelloSpringMsg {
   string name = 1;
