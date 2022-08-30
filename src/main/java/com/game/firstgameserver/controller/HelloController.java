@@ -9,4 +9,9 @@ public class HelloController {
     public String sayHello() {
         return "Hello World";
     }
+
+    @RequestMapping("")
+    public String index() {
+        return "这是测试页面";
+    }
 }
