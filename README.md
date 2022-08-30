@@ -2,8 +2,6 @@
 
 FirstGame Server
 
-> test
-
 |[![License][license:badge]](/LICENSE)|[![Issues][issues:badge]][issues]|
 |:------ | ------------------------------------------------:|
 |[![Stargazers][stargazers:badge]][stargazers]|[![Pulls][pulls:badge]][pulls]|
