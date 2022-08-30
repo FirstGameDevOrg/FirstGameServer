@@ -7,7 +7,7 @@
 
 [license:badge]: https://img.shields.io/github/license/FirstGameDevOrg/FirstGameServer?logo=github&style=for-the-badge
 
-[issues:badge]: https://img.shields.io/github/issuesFirstGameDevOrg/FirstGameServer?logo=github&style=for-the-badge
+[issues:badge]: https://img.shields.io/github/issues/FirstGameDevOrg/FirstGameServer?logo=github&style=for-the-badge
 [issues]: https://github.com/FirstGameDevOrg/FirstGameServer/issues
 
 [stargazers:badge]: https://img.shields.io/github/stars/FirstGameDevOrg/FirstGameServer?logo=github&style=for-the-badge
