@@ -1,6 +1,6 @@
 # FirstGameServer
 
-FirstGame 游戏服务器
+FirstGame Server
 
 |[![License][license:badge]](/LICENSE)|[![Issues][issues:badge]][issues]|
 |:------ | ------------------------------------------------:|
