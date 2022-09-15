@@ -7,6 +7,15 @@ https://www.yuque.com/iohao/game/irth38#cJLdC
     方法返回值: com.game.firstgameserver.iogame.msg.HelloSpringMsg
  
 
+==================== DemoSearchroomAction  ====================
+路由: 8 - 2  --- 【】 --- 【DemoCreateAction:22】【here】
+    方法参数: com.game.firstgameserver.iogame.msg.UserCreate
+    方法返回值: com.game.firstgameserver.iogame.msg.PlayroomInfo
+ 
+路由: 8 - 3  --- 【】 --- 【DemoSearchroomAction:20】【here】
+    方法返回值: com.game.firstgameserver.iogame.msg.PlayroomList
+ 
+
 ==================== DemoLoginAction 用户登录有关事务 ====================
 路由: 15 - 0  --- 【登录方法】 --- 【DemoLoginAction:37】【here】
     方法参数: com.game.firstgameserver.iogame.msg.UserLogin

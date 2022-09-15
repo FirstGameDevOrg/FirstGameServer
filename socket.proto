@@ -1,20 +1,12 @@
 syntax = "proto3";
 package pb.socket;
 
-// 测试spring消息连通
-message HelloSpringMsg {
-  string name = 1;
-
-}
-
-// 用户信息响应
-message UserInfo {
-  // id
-  int64 id = 1;
-  // 用户昵称
-  string name = 2;
-  // jwt
-  string jwt = 3;
+// 用户登录请求
+message UserLogin {
+  // 用户名
+  string username = 1;
+  // 密码
+  string password = 2;
 
 }
 
@@ -34,12 +26,41 @@ message ExternalMessage {
 
 }
 
-// 用户登录请求
-message UserLogin {
-  // 用户名
+// {classComment}
+message PlayroomInfo {
+  string roomid = 1;
+  string roomname = 2;
+  string primaryuserID = 3;
+
+}
+
+// 用户信息响应
+message UserInfo {
+  // id
+  int64 id = 1;
+  // 用户昵称
+  string name = 2;
+  // jwt
+  string jwt = 3;
+
+}
+
+// 测试spring消息连通
+message HelloSpringMsg {
+  string name = 1;
+
+}
+
+// {classComment}
+message UserCreate {
   string username = 1;
-  // 密码
-  string password = 2;
+  string roomname = 2;
+
+}
+
+// {classComment}
+message PlayroomList {
+  map<string,PlayroomInfo> stringPlayroomInfoMap = 1;
 
 }
 
