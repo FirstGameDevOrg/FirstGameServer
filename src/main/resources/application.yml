@@ -1,9 +1,9 @@
-#spring:
-#  datasource:
-#    driverClassName: com.mysql.cj.jdbc.Driver
-#    url: jdbc:mysql://127.0.0.1:3360/springboot5dy57?useUnicode=true&characterEncoding=utf-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&useSSL=false
-#    username: root
-#    password: a123456
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3360/firstgameserver?useUnicode=true&characterEncoding=utf-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&useSSL=false
+    username: root
+    password: firstgame123456
 
 #mybatis:
 #  mapper-locations: classpath*:/mapper/*.xml
