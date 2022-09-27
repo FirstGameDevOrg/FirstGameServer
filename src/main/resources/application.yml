@@ -5,6 +5,7 @@ spring:
     username: root
     password: firstgame123456
 
+
 #mybatis:
 #  mapper-locations: classpath*:/mapper/*.xml
 #  type-aliases-package: com.game.firstgameserver.*.pojo
