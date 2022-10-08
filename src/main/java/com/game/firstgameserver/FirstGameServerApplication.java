@@ -4,6 +4,7 @@ import com.game.firstgameserver.iogame.server.DemoSpringLogicServer;
 import com.iohao.game.action.skeleton.ext.spring.ActionFactoryBeanForSpring;
 import com.iohao.game.bolt.broker.client.external.config.ExternalGlobalConfig;
 import com.iohao.game.simple.SimpleHelper;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -11,8 +12,12 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
 import org.springframework.context.annotation.Bean;
 
 import java.util.List;
+@SpringBootApplication
+//@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
 
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
+//@MapperScan("com.game.firstgameserver.mapper")
+//扫描mapper接口所在的包
+
 public class FirstGameServerApplication {
 
     public static void main(String[] args) {
