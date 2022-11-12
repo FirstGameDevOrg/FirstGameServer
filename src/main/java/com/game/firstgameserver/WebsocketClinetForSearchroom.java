@@ -1,13 +1,11 @@
 package com.game.firstgameserver;
 
-import com.game.firstgameserver.iogame.msg.PlayroomInfo;
 import com.game.firstgameserver.iogame.msg.PlayroomList;
-import com.game.firstgameserver.iogame.msg.UserCreate;
 import com.game.firstgameserver.iogame.utils.ClientCommandKit;
 import com.game.firstgameserver.iogame.utils.WebsocketClientKit;
 import com.iohao.game.bolt.broker.client.external.bootstrap.message.ExternalMessage;
 
-public class DemoWebsocketClinetForSearchroom {
+public class WebsocketClinetForSearchroom {
 
     public static void main(String[] args) throws Exception {
 
@@ -22,9 +20,9 @@ public class DemoWebsocketClinetForSearchroom {
 
         // 请求、响应
         ExternalMessage externalMessageHere = ClientCommandKit.createExternalMessage(
-                // DemoCmdForSpring.cmd,
-                // DemoCmdForSpring.here,
-                8,3,null
+                // CmdForSpring.cmd,
+                // CmdForSpring.here,
+                8, 3, null
 
         );
 

@@ -7,7 +7,7 @@ import com.game.firstgameserver.iogame.utils.ClientCommandKit;
 import com.game.firstgameserver.iogame.utils.WebsocketClientKit;
 import com.iohao.game.bolt.broker.client.external.bootstrap.message.ExternalMessage;
 
-public class DemoWebsocketClinetForCreateroom {
+public class WebsocketClinetForCreateroom {
 
 
     public static void main(String[] args) throws Exception {
@@ -25,9 +25,9 @@ public class DemoWebsocketClinetForCreateroom {
 
         // 请求、响应
         ExternalMessage externalMessageHere = ClientCommandKit.createExternalMessage(
-               // DemoCmdForSpring.cmd,
-               // DemoCmdForSpring.here,
-                8,2,
+                // CmdForSpring.cmd,
+                // CmdForSpring.here,
+                8, 2,
                 userCreate
         );
 

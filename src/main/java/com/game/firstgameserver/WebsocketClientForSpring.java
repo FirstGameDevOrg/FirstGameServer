@@ -16,7 +16,7 @@
  */
 package com.game.firstgameserver;
 
-import com.game.firstgameserver.iogame.action.DemoCmdForSpring;
+import com.game.firstgameserver.iogame.action.CmdForSpring;
 import com.game.firstgameserver.iogame.msg.HelloSpringMsg;
 import com.game.firstgameserver.iogame.utils.ClientCommandKit;
 import com.game.firstgameserver.iogame.utils.WebsocketClientKit;
@@ -30,7 +30,7 @@ import lombok.extern.slf4j.Slf4j;
  * @date 2022-03-24
  */
 @Slf4j
-public class DemoWebsocketClientForSpring {
+public class WebsocketClientForSpring {
 
     public static void main(String[] args) throws Exception {
 
@@ -46,8 +46,8 @@ public class DemoWebsocketClientForSpring {
 
         // 请求、响应
         ExternalMessage externalMessageHere = ClientCommandKit.createExternalMessage(
-                DemoCmdForSpring.cmd,
-                DemoCmdForSpring.here,
+                CmdForSpring.cmd,
+                CmdForSpring.here,
                 helloReq
         );
 

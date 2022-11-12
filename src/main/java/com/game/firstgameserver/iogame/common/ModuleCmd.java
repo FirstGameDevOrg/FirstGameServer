@@ -25,7 +25,7 @@ package com.game.firstgameserver.iogame.common;
  * @author 渔民小镇
  * @date 2022-03-23
  */
-public interface DemoModuleCmd {
+public interface ModuleCmd {
     /**
      * 逻辑服 示例 cmd 模块1
      */

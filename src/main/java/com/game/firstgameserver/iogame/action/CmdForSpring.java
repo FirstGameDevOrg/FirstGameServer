@@ -16,7 +16,7 @@
  */
 package com.game.firstgameserver.iogame.action;
 
-import com.game.firstgameserver.iogame.common.DemoModuleCmd;
+import com.game.firstgameserver.iogame.common.ModuleCmd;
 
 
 /**
@@ -25,11 +25,11 @@ import com.game.firstgameserver.iogame.common.DemoModuleCmd;
  * @author 渔民小镇
  * @date 2022-03-23
  */
-public interface DemoCmdForSpring {
+public interface CmdForSpring {
     /**
      * 模块 - 主 cmd : 2
      */
-    int cmd = DemoModuleCmd.demoModule_2_spring_cmd;
+    int cmd = ModuleCmd.demoModule_2_spring_cmd;
 
     /**
      * 示例 here 方法

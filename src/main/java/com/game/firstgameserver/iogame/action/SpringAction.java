@@ -17,7 +17,7 @@
 package com.game.firstgameserver.iogame.action;
 
 import com.game.firstgameserver.iogame.msg.HelloSpringMsg;
-import com.game.firstgameserver.iogame.service.DemoSpringService;
+import com.game.firstgameserver.iogame.service.SpringService;
 import com.iohao.game.action.skeleton.annotation.ActionController;
 import com.iohao.game.action.skeleton.annotation.ActionMethod;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,13 +30,13 @@ import org.springframework.stereotype.Component;
  * @date 2022-03-22
  */
 @Component
-@ActionController(DemoCmdForSpring.cmd)
-public class DemoSpringAction {
+@ActionController(CmdForSpring.cmd)
+public class SpringAction {
     /**
      * spring 管理的类： service 业务类
      */
     @Autowired
-    DemoSpringService demoSpringService;
+    SpringService springService;
 
     /**
      * spring 示例方法
@@ -44,8 +44,8 @@ public class DemoSpringAction {
      * @param helloReq helloReq
      * @return HelloReq
      */
-    @ActionMethod(DemoCmdForSpring.here)
+    @ActionMethod(CmdForSpring.here)
     public HelloSpringMsg here(HelloSpringMsg helloReq) {
-        return demoSpringService.here(helloReq);
+        return springService.here(helloReq);
     }
 }

@@ -2,7 +2,7 @@ package com.game.firstgameserver.iogame.action;
 
 import com.game.firstgameserver.iogame.msg.PlayroomInfo;
 import com.game.firstgameserver.iogame.msg.UserCreate;
-import com.game.firstgameserver.iogame.server.DemoServerCommand;
+import com.game.firstgameserver.iogame.server.ServerCommand;
 import com.iohao.game.action.skeleton.annotation.ActionController;
 import com.iohao.game.action.skeleton.annotation.ActionMethod;
 import com.iohao.game.action.skeleton.core.flow.FlowContext;
@@ -15,17 +15,17 @@ import org.springframework.stereotype.Component;
 
 //创建房间
 
-@ActionController(DemoCmdForCreate.cmd)
-public class DemoCreateAction {
+@ActionController(CmdForCreate.cmd)
+public class CreateAction {
 
-    @ActionMethod(DemoCmdForCreate.create)
+    @ActionMethod(CmdForCreate.create)
     public PlayroomInfo here(UserCreate userCreate, FlowContext flowContext) {
 
         //String primaryUserId = flowContext.get;
         //获取房主用户名
         String primaryUserId = userCreate.getUsername();
         //系统生成一个房间id
-        int roomlist=100+DemoServerCommand.getlength();
+        int roomlist = 100 + ServerCommand.getlength();
         String roomid = String.valueOf(roomlist);
         //获取用户自定义的房间名
         String roomname = userCreate.getRoomname();
@@ -45,7 +45,7 @@ public class DemoCreateAction {
 
 
         //
-        DemoServerCommand.addroomitem(roomid,playroomInfo);
+        ServerCommand.addroomitem(roomid, playroomInfo);
         return playroomInfo;
     }
 

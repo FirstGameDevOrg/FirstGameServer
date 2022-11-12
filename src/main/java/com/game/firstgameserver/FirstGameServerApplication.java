@@ -1,14 +1,11 @@
 package com.game.firstgameserver;
 
-import com.game.firstgameserver.iogame.server.DemoSpringLogicServer;
+import com.game.firstgameserver.iogame.server.SpringLogicServer;
 import com.iohao.game.action.skeleton.ext.spring.ActionFactoryBeanForSpring;
 import com.iohao.game.bolt.broker.client.external.config.ExternalGlobalConfig;
 import com.iohao.game.simple.SimpleHelper;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 
 import java.util.List;
@@ -31,7 +28,7 @@ public class FirstGameServerApplication {
         int port = 10100;
 
         // spring 逻辑服
-        var demoLogicServer = new DemoSpringLogicServer();
+        var demoLogicServer = new SpringLogicServer();
 
         // 启动 对外服、网关服、逻辑服; 并生成游戏业务文档
         SimpleHelper.run(port, List.of(demoLogicServer));
