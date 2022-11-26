@@ -1,7 +1,7 @@
 package com.game.firstgameserver.controller;
 
 
-import com.game.firstgameserver.iogame.service.DemoRegisterService;
+import com.game.firstgameserver.iogame.service.RegisterService;
 import com.game.firstgameserver.iogame.service.SelectService;
 import com.game.firstgameserver.pojo.User;
 import lombok.extern.slf4j.Slf4j;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class RegisterController {
     @Autowired
-    DemoRegisterService demoRegisterService;
+    RegisterService registerService;
     @Autowired
     SelectService selectService;
 
@@ -38,7 +38,7 @@ public class RegisterController {
             user.setUsername(userName);
             user.setPassword(password);
             user.setMailaddress(mailAddress);
-            demoRegisterService.userInsert(user);
+            registerService.userInsert(user);
             return 0;
 
         }
