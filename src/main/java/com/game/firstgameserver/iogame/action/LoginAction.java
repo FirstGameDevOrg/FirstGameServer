@@ -36,6 +36,7 @@ public class LoginAction {
      */
     @ActionMethod(CmdForUser.login)
     public UserInfo here(UserLogin userLogin, FlowContext flowContext) {
+        
         if (userLoginService.userIsExist(userLogin)) {
             User user = userLoginService.queryUserInfo(userLogin);
             if (!user.getIsconfirmed()) {
