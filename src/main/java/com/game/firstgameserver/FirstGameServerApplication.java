@@ -1,6 +1,5 @@
 package com.game.firstgameserver;
 
-import com.game.firstgameserver.iogame.server.DemoSpringLogicServer;
 import com.game.firstgameserver.iogame.server.SpringLogicServer;
 import com.iohao.game.action.skeleton.ext.spring.ActionFactoryBeanForSpring;
 import com.iohao.game.bolt.broker.client.external.config.ExternalGlobalConfig;
@@ -21,11 +20,10 @@ public class FirstGameServerApplication {
     public static void main(String[] args) {
         SpringApplication.run(FirstGameServerApplication.class, args);
 
-        
         // 注意，这个是临时测试用的，设置为 false 表示不用登录就可以访问逻辑服的方法
         /*
-        * 旧方法废弃
-        * */
+         * 旧方法废弃
+         * */
         //ExternalGlobalConfig.verifyIdentity = false;
         ExternalGlobalConfig.accessAuthenticationHook.setVerifyIdentity(false);
         //ExternalGlobalConfig.accessAuthenticationHook.addIgnoreAuthenticationCmd(15,0);
@@ -33,7 +31,7 @@ public class FirstGameServerApplication {
         int port = 10100;
 
         // spring 逻辑服
-        var demoLogicServer = new DemoSpringLogicServer();
+        var demoLogicServer = new SpringLogicServer();
 
         // 启动 对外服、网关服、逻辑服; 并生成游戏业务文档
         SimpleHelper.run(port, List.of(demoLogicServer));
