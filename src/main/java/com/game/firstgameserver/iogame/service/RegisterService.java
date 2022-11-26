@@ -2,12 +2,11 @@ package com.game.firstgameserver.iogame.service;
 
 import com.game.firstgameserver.mapper.UserMapper;
 import com.game.firstgameserver.pojo.User;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class DemoRegisterService {
+public class RegisterService {
     @Autowired
     private UserMapper userMapper;
 

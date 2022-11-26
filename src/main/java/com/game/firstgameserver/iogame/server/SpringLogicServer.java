@@ -16,7 +16,7 @@
  */
 package com.game.firstgameserver.iogame.server;
 
-import com.game.firstgameserver.iogame.action.DemoSpringAction;
+import com.game.firstgameserver.iogame.action.SpringAction;
 import com.iohao.game.action.skeleton.core.BarSkeleton;
 import com.iohao.game.action.skeleton.core.BarSkeletonBuilderParamConfig;
 import com.iohao.game.action.skeleton.core.flow.interal.DebugInOut;
@@ -34,14 +34,14 @@ import com.iohao.game.common.kit.NetworkKit;
  * @author 渔民小镇
  * @date 2022-03-24
  */
-public class DemoSpringLogicServer extends AbstractBrokerClientStartup {
+public class SpringLogicServer extends AbstractBrokerClientStartup {
 
     @Override
     public BarSkeleton createBarSkeleton() {
         // 业务框架构建器 配置
         var config = new BarSkeletonBuilderParamConfig()
-                // 扫描 DemoSpringAction.class 所在包
-                .addActionController(DemoSpringAction.class);
+                // 扫描 SpringAction.class 所在包
+                .addActionController(SpringAction.class);
         // 业务框架构建器
         var builder = config.createBuilder();
         // 添加控制台输出插件

@@ -1,5 +1,11 @@
 package com.game.firstgameserver.iogame.msg;
 
+/**
+ * 单个房间信息
+ *
+ * @author zlk
+ */
+
 import com.baidu.bjf.remoting.protobuf.annotation.ProtobufClass;
 import com.iohao.game.widget.light.protobuf.ProtoFileMerge;
 import lombok.AccessLevel;
@@ -16,5 +22,8 @@ import java.util.Map;
 @ProtoFileMerge(fileName = "socket.proto", filePackage = "pb.socket")
 @FieldDefaults(level = AccessLevel.PUBLIC)
 public class PlayroomList {
-    Map<String, PlayroomInfo> stringPlayroomInfoMap;
+    /**
+     * 房间列表map
+     */
+    Map<Long, PlayroomInfo> longPlayroomInfoMap;
 }

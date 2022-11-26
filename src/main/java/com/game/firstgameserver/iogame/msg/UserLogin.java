@@ -22,9 +22,9 @@ import lombok.experimental.FieldDefaults;
 public class UserLogin {
 
     /**
-     * 用户名
+     * 邮箱
      */
-    String username;
+    String email;
 
     /**
      * 密码

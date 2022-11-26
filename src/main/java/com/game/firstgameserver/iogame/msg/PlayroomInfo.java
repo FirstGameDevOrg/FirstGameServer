@@ -10,6 +10,12 @@ import lombok.experimental.FieldDefaults;
 
 import java.util.Map;
 
+/**
+ * 单个房间信息
+ *
+ * @author zlk
+ */
+
 @Data
 @Setter
 @ToString
@@ -17,15 +23,24 @@ import java.util.Map;
 @ProtoFileMerge(fileName = "socket.proto", filePackage = "pb.socket")
 @FieldDefaults(level = AccessLevel.PUBLIC)
 public class PlayroomInfo {
-
-    //服务器生成的
-    String roomid;
-
-    //用户创建的
-    String roomname;
-
-//主机用户名
-    String primaryuserID;
-
-
+    /**
+     * 房间ID
+     */
+    long roomId;
+    /**
+     * 房间名
+     */
+    String roomName;
+    /**
+     * 创建者ID
+     */
+    long primaryuserID;
+    /**
+     * 房间最大人数
+     */
+    int playerMaxCount;
+    /**
+     * 房间当前人数
+     */
+    int playerCount;
 }

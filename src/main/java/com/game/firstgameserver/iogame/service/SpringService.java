@@ -27,7 +27,7 @@ import org.springframework.stereotype.Component;
  * @date 2022-03-22
  */
 @Component
-public class DemoSpringService {
+public class SpringService {
     public HelloSpringMsg here(HelloSpringMsg helloReq) {
         HelloSpringMsg newHelloReq = new HelloSpringMsg();
         newHelloReq.name = helloReq.name + ", I'm spring ";
