@@ -1,14 +1,12 @@
 package com.game.firstgameserver;
 
 import com.game.firstgameserver.iogame.server.DemoSpringLogicServer;
+import com.game.firstgameserver.iogame.server.SpringLogicServer;
 import com.iohao.game.action.skeleton.ext.spring.ActionFactoryBeanForSpring;
 import com.iohao.game.bolt.broker.client.external.config.ExternalGlobalConfig;
 import com.iohao.game.simple.SimpleHelper;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 
 import java.util.List;
@@ -25,8 +23,12 @@ public class FirstGameServerApplication {
 
         
         // 注意，这个是临时测试用的，设置为 false 表示不用登录就可以访问逻辑服的方法
-        ExternalGlobalConfig.verifyIdentity = false;
-
+        /*
+        * 旧方法废弃
+        * */
+        //ExternalGlobalConfig.verifyIdentity = false;
+        ExternalGlobalConfig.accessAuthenticationHook.setVerifyIdentity(false);
+        //ExternalGlobalConfig.accessAuthenticationHook.addIgnoreAuthenticationCmd(15,0);
         // 游戏对外服端口
         int port = 10100;
 
