@@ -25,5 +25,5 @@ public class PlayroomList {
     /**
      * 房间列表map
      */
-    Map<Long, PlayroomInfo> longPlayroomInfoMap;
+    Map<Integer, PlayroomInfo> longPlayroomInfoMap;
 }

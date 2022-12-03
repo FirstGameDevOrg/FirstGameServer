@@ -10,7 +10,7 @@ https://www.yuque.com/iohao/game/irth38#cJLdC
 ==================== SearchroomAction 房间相关 ====================
 路由: 8 - 2  --- 【创建房间方法】 --- 【CreateRoomAction:32】【here】
     方法参数: com.game.firstgameserver.iogame.msg.UserCreateRoom
-    方法返回值: LongPb
+    方法返回值: IntPb
  
 路由: 8 - 3  --- 【】 --- 【SearchroomAction:19】【here】
     方法返回值: com.game.firstgameserver.iogame.msg.PlayroomList

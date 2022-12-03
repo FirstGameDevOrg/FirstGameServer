@@ -29,15 +29,15 @@ public class CreateRoomAction {
      **/
     @ActionMethod(CmdForCreate.create)
 
-    public long here(UserCreateRoom userCreateRoom, FlowContext flowContext) {
+    public int here(UserCreateRoom userCreateRoom, FlowContext flowContext) {
 
         /*
          * 获取userid
          * */
-        long primaryUserId = flowContext.getUserId();
+        int primaryUserId = (int) flowContext.getUserId();
 
         //系统生成一个房间id
-        long roomID = 100 + ServerCommand.getlength();
+        int roomID = 100 + ServerCommand.getlength();
         //String roomid = String.valueOf(roomlist);
         //获取用户自定义的房间名
         String roomName = userCreateRoom.getRoomName();
@@ -48,8 +48,8 @@ public class CreateRoomAction {
         int playerMaxCount = userCreateRoom.getPlayerCount();
         //RoomID_long roomID_long = new RoomID_long();
         // boolean success = UserIdSettingKit.settingUserId(flowContext, newUserId);
-        if (true) {
-            log.info("Create room success", primaryUserId, roomID, roomName, playerMaxCount);
+        if (playerMaxCount<5) {
+
             PlayroomInfo playroomInfo = new PlayroomInfo();
             playroomInfo.setPrimaryuserID(primaryUserId);
             //房间id
@@ -63,7 +63,7 @@ public class CreateRoomAction {
             playroomInfo.setPlayerCount(1);
             //房间列表更新
             ServerCommand.addroomitem(roomID, playroomInfo);
-
+            log.info("Create room success", primaryUserId, roomID, roomName, playerMaxCount);
             return roomID;
 
         } else {

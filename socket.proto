@@ -1,15 +1,6 @@
 syntax = "proto3";
 package pb.socket;
 
-// 用户登录请求
-message UserLogin {
-  // 用户名
-  string username = 1;
-  // 密码
-  string password = 2;
-
-}
-
 // 对外服数据协议包装
 message ExternalMessage {
   // 请求命令类型: 0 心跳，1 业务
@@ -26,11 +17,19 @@ message ExternalMessage {
 
 }
 
-// {classComment}
-message PlayroomInfo {
-  string roomid = 1;
-  string roomname = 2;
-  string primaryuserID = 3;
+// 单个房间信息
+message PlayroomList {
+  // 房间列表map
+  map<int32,PlayroomInfo> longPlayroomInfoMap = 1;
+
+}
+
+// 用户创建房间请求
+message UserCreateRoom {
+  // 房间名
+  string roomName = 1;
+  // 最大人数
+  int32 playerCount = 2;
 
 }
 
@@ -42,6 +41,20 @@ message UserInfo {
   string name = 2;
   // jwt
   string jwt = 3;
+
+}
+
+// {classComment}
+message UserJoin {
+  string username = 1;
+  int64 roomid = 2;
+
+}
+
+// {classComment}
+message UserSearch {
+  string username = 1;
+  string roomname = 2;
 
 }
 
@@ -58,9 +71,27 @@ message UserCreate {
 
 }
 
-// {classComment}
-message PlayroomList {
-  map<string,PlayroomInfo> stringPlayroomInfoMap = 1;
+// 房间创建信息
+message PlayroomInfo {
+  // 房间ID
+  int32 roomId = 1;
+  // 房间名
+  string roomName = 2;
+  // 创建者ID
+  int64 primaryuserID = 3;
+  // 房间最大人数
+  int32 playerMaxCount = 4;
+  // 房间当前人数
+  int32 playerCount = 5;
+
+}
+
+// 用户登录请求
+message UserLogin {
+  // 邮箱
+  string email = 1;
+  // 密码
+  string password = 2;
 
 }
 

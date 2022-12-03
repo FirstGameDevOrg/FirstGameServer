@@ -11,7 +11,7 @@ import lombok.experimental.FieldDefaults;
 import java.util.Map;
 
 /**
- * 单个房间信息
+ * 房间创建信息
  *
  * @author zlk
  */
@@ -26,7 +26,7 @@ public class PlayroomInfo {
     /**
      * 房间ID
      */
-    long roomId;
+    int roomId;
     /**
      * 房间名
      */

@@ -15,20 +15,20 @@ import java.util.Map;
 @Getter
 public class ServerCommand {
 
-    static Map<Long, PlayroomInfo> stringPlayroomInfoMap = new HashMap<>();
+    static Map<Integer, PlayroomInfo> PlayroomInfoMap = new HashMap<>();
 
-    public static void addroomitem(long key, PlayroomInfo playroomInfo) {
-        stringPlayroomInfoMap.put(key, playroomInfo);
-        System.out.println("现在的大厅列表是：" + stringPlayroomInfoMap);
+    public static void addroomitem(int key, PlayroomInfo playroomInfo) {
+        PlayroomInfoMap.put(key, playroomInfo);
+        System.out.println("现在的大厅列表是：" + PlayroomInfoMap);
 
     }
 
-    public static Map<Long, PlayroomInfo> getroomitem() {
-        return stringPlayroomInfoMap;
+    public static Map<Integer, PlayroomInfo> getroomitem() {
+        return PlayroomInfoMap;
     }
     public static int getlength(){
 
-        return  stringPlayroomInfoMap.size();
+        return  PlayroomInfoMap.size();
     }
 
 }
