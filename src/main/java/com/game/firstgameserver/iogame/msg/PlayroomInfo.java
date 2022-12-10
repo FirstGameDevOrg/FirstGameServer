@@ -34,7 +34,7 @@ public class PlayroomInfo {
     /**
      * 创建者ID
      */
-    long primaryuserID;
+    int primaryuserID;
     /**
      * 房间最大人数
      */
