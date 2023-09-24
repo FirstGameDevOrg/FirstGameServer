@@ -26,6 +26,7 @@ import java.util.regex.Matcher;
 /**
  * @author 渔民小镇
  * @date 2022-04-21
+ * 创建.proto文件
  */
 public class SocketGenerateFileForProto {
     public static void main(String[] args) {

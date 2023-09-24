@@ -15,13 +15,13 @@ public class MailTest {
     @Test
     public void testmailservice() {
 
-        mailService.sendSimpleMail(
-                "jftt_wingedhussar@163.com",
-                "876029418@qq.com",
-                "邮件的标题",
-                "wwwcn.pornhub.com"
-
-        );
+//        mailService.sendSimpleMail(
+//                "jftt_wingedhussar@163.com",
+//                "876029418@qq.com",
+//                "邮件的标题",
+//                "wwwcn.pornhub.com"
+//
+//        )
 
     }
 

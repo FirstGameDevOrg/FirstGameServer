@@ -18,12 +18,13 @@ https://www.yuque.com/iohao/game/irth38#cJLdC
  
 
 ==================== LoginAction 用户登录有关事务 ====================
-路由: 15 - 0  --- 【登录方法】 --- 【LoginAction:38】【here】
+路由: 15 - 0  --- 【登录方法】 --- 【LoginAction:38】【login】
     方法参数: com.game.firstgameserver.iogame.msg.UserLogin
     方法返回值: com.game.firstgameserver.iogame.msg.UserInfo
  
 
 ==================== 错误码 ====================
+ -1007 : 强制玩家下线 
  -1006 : 数据不存在 
  -1005 : class 不存在 
  -1004 : 请先登录 

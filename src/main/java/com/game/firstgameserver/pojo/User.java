@@ -12,8 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName("ueuser")
-
+@TableName("user")
 public class User {
     //@TableId(type = IdType.ASSIGN_ID)
     @TableId(type = IdType.AUTO)
@@ -22,5 +21,4 @@ public class User {
     private String password;
     private String mailaddress;
     private Boolean isconfirmed;
-
 }

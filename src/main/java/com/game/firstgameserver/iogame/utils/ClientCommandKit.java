@@ -17,10 +17,9 @@
 package com.game.firstgameserver.iogame.utils;
 
 import com.iohao.game.action.skeleton.core.CmdKit;
-import com.iohao.game.action.skeleton.core.flow.codec.ProtoDataCodec;
+import com.iohao.game.action.skeleton.core.DataCodecKit;
+import com.iohao.game.bolt.broker.client.external.bootstrap.ExternalKit;
 import com.iohao.game.bolt.broker.client.external.bootstrap.message.ExternalMessage;
-import com.iohao.game.bolt.broker.client.external.bootstrap.message.ExternalMessageCmdCode;
-import com.iohao.game.common.kit.ProtoKit;
 import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
 
@@ -73,20 +72,7 @@ public class ClientCommandKit {
 
     public ExternalMessage createExternalMessage(int cmd, int subCmd, Object object) {
         // 游戏框架内置的协议， 与游戏前端相互通讯的协议
-        ExternalMessage externalMessage = new ExternalMessage();
-        // 请求命令类型: 0 心跳，1 业务
-        externalMessage.setCmdCode(ExternalMessageCmdCode.biz);
-        // 路由
-        externalMessage.setCmdMerge(cmd, subCmd);
-
-        if (object != null) {
-            // 业务数据
-            byte[] data = ProtoDataCodec.me().encode(object);
-            // 业务数据
-            externalMessage.setData(data);
-        }
-
-        return externalMessage;
+        return ExternalKit.createExternalMessage(cmd, subCmd, object);
     }
 
     public void addParseResult(int cmd, int subCmd, Class<?> resultClass) {
@@ -101,7 +87,7 @@ public class ClientCommandKit {
         System.out.println();
         // 接收服务器返回的消息
         byte[] dataContent = byteBuffer.array();
-        ExternalMessage externalMessage = ProtoKit.parseProtoByte(dataContent, ExternalMessage.class);
+        ExternalMessage externalMessage = DataCodecKit.decode(dataContent, ExternalMessage.class);
         int cmdMerge = externalMessage.getCmdMerge();
         int cmd = CmdKit.getCmd(cmdMerge);
         int subCmd = CmdKit.getSubCmd(cmdMerge);
@@ -138,7 +124,7 @@ public class ClientCommandKit {
         }
 
         byte[] data = message.getData();
-        Object o = ProtoKit.parseProtoByte(data, clientCommand.resultClass);
+        Object o = DataCodecKit.decode(data, clientCommand.resultClass);
 
         log.info(" {}", o);
     }

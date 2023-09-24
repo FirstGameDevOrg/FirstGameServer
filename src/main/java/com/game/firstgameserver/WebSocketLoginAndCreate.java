@@ -5,10 +5,9 @@ import com.game.firstgameserver.iogame.msg.UserInfo;
 import com.game.firstgameserver.iogame.msg.UserLogin;
 import com.game.firstgameserver.iogame.utils.ClientCommandKit;
 import com.game.firstgameserver.iogame.utils.WebsocketClientKit;
-import com.iohao.game.action.skeleton.protocol.wrapper.LongPb;
 import com.iohao.game.bolt.broker.client.external.bootstrap.message.ExternalMessage;
 
-public class WebSocketLoginAndCreatr {
+public class WebSocketLoginAndCreate {
     public static void main(String[] args) throws Exception {
 
         initClientCommands();
@@ -40,7 +39,7 @@ public class WebSocketLoginAndCreatr {
         );
 
         ClientCommandKit.createClientCommand(externalMessageHere, UserInfo.class);
-        ClientCommandKit.createClientCommand(externalMessag_create, LongPb.class);
+//        ClientCommandKit.createClientCommand(externalMessag_create, LongPb.class);
         ClientCommandKit.login=true;
     }
 

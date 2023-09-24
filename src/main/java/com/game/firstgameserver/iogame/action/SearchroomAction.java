@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
 public class SearchroomAction {
     @ActionMethod(CmdForCreate.search)
     public PlayroomList here() {
-//获取大厅列表
+        //获取大厅列表
         PlayroomList playroomList = new PlayroomList();
         playroomList.longPlayroomInfoMap = ServerCommand.getroomitem();
         return playroomList;

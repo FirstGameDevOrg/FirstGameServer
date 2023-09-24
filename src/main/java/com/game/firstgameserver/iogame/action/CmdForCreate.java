@@ -6,7 +6,7 @@ public interface CmdForCreate {
 
 
     /**
-     * 模块 - 主 cmd : 2
+     * 模块 - 主 cmd : 8
      */
     int cmd = ModuleCmd.demoModule_8_hall_cmd;
 

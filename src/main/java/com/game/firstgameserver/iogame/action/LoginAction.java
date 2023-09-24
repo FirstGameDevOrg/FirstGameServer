@@ -35,11 +35,11 @@ public class LoginAction {
      * @return UserInfo
      */
     @ActionMethod(CmdForUser.login)
-    public UserInfo here(UserLogin userLogin, FlowContext flowContext) {
-        
+    public UserInfo login(UserLogin userLogin, FlowContext flowContext) {
+        log.info("登录");
         if (userLoginService.userIsExist(userLogin)) {
             User user = userLoginService.queryUserInfo(userLogin);
-            if (!user.getIsconfirmed()) {
+            if (user.getIsconfirmed()) {
                 String jwt = jwtUtils.generateToken(userLogin);
                 boolean success = UserIdSettingKit.settingUserId(flowContext, user.getId());
                 if (success) {
