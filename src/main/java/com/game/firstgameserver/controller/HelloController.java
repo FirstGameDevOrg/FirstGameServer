@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * 测试
+ */
 @RestController
 public class HelloController {
     @RequestMapping("say")

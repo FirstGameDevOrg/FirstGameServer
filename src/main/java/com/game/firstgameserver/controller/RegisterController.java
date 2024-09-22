@@ -1,8 +1,8 @@
 package com.game.firstgameserver.controller;
 
 
-import com.game.firstgameserver.iogame.service.RegisterService;
-import com.game.firstgameserver.iogame.service.SelectService;
+import com.game.firstgameserver.game.service.RegisterService;
+import com.game.firstgameserver.game.service.SelectService;
 import com.game.firstgameserver.pojo.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
+/**
+ * 注册
+ */
 @Slf4j
 @RestController
 public class RegisterController {

@@ -1,7 +1,7 @@
 package com.game.firstgameserver;
 
-import com.game.firstgameserver.iogame.server.SpringLogicServer;
-import com.game.firstgameserver.iogame.utils.TimeUtils;
+import com.game.firstgameserver.game.server.GameLogicServer;
+import com.game.firstgameserver.game.utils.TimeUtils;
 import com.iohao.game.action.skeleton.ext.spring.ActionFactoryBeanForSpring;
 import com.iohao.game.bolt.broker.client.external.config.ExternalGlobalConfig;
 import com.iohao.game.simple.SimpleHelper;
@@ -31,10 +31,10 @@ public class FirstGameServerApplication {
         int port = 10100;
 
         // spring 逻辑服
-        var demoLogicServer = new SpringLogicServer();
+        var gameLogicServer = new GameLogicServer();
 
         // 启动 对外服、网关服、逻辑服; 并生成游戏业务文档
-        SimpleHelper.run(port, List.of(demoLogicServer));
+        SimpleHelper.run(port, List.of(gameLogicServer));
         TimeUtils.bootTimer=System.currentTimeMillis();
         /*
          * 该示例文档地址
